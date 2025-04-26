@@ -1,0 +1,297 @@
+@font-face {
+  font-family: 'Lucida Sans';
+  src: url('../images/fonts/LSANS.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: 
+    linear-gradient(to top, #000117 0%, rgba(0, 1, 23, 0) 30%), 
+    url('../images/mobile/bg-phone.webp');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.star {
+  position: absolute;
+  width: 48px; 
+  height: 48px;
+  background-image: url('../images/mobile/star.webp'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+  animation: twinkle 6.8s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.star1 {
+  width: 135px; 
+  height: 135px;
+  top: 0;
+  right: 0;
+}
+
+.star2 { 
+  width: 73px; 
+  height: 73px;
+  top: 58px; 
+  left: 5%;
+}
+
+.star3 {
+  top: 460px;
+  left: 2%;
+}
+
+.star4 {
+  top: 555px;
+  left: 88%;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.4; }
+  36.76% { opacity: 0.4; } 
+  50% { opacity: 1; }
+  86.76% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.header {
+  margin: 16px 0 5px 0;
+}
+.logo {
+  width: 162px;
+  height: 80px;
+}
+
+.main {
+  flex: 1;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  background-image: url('../images/mobile/_Group_.png');
+  background-size: 100% 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text-top {
+  padding-top: 56px;
+}
+.text-top-1 {
+  font-family: Aclonica;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.text-top-2 {
+  font-family: Aclonica;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 111%;
+  letter-spacing: -3%;
+  text-align: center;
+  color: #FFE617;
+  text-shadow: 0.88px 1.75px 0px rgba(120, 85, 7, 1);
+  margin-bottom: 16px;
+}
+
+.btn {
+  font-family: Lucida Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 313px;
+  height: 50px;
+  background: rgba(255, 225, 117, 1);
+  border: 1px solid rgba(246, 143, 0, 1);
+  text-decoration: none;
+  color: rgba(129, 34, 0, 1);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 12px;
+  animation: scaleButton 2.5s ease-in-out infinite alternate;
+}
+/* Визначаємо анімацію */
+@keyframes scaleButton {
+  0% {
+    transform: scale(1); /* стандартний розмір */
+  }
+  50% {
+    transform: scale(0.85); /* зменшення на 15% */
+  }
+  100% {
+    transform: scale(1); /* повернення до стандартного розміру */
+  }
+}
+
+.corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url('../images/mobile/button-elem.webp'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Позиціонування кожного кутка */
+.top-left {
+  top: 4px;
+  left: 4px;
+  transform: rotate(-90deg);
+}
+.top-right {
+  top: 4px;
+  right: 4px;
+}
+.bottom-left {
+  bottom: 4px;
+  left: 4px;
+  transform: rotate(-180deg);
+}
+.bottom-right {
+  bottom: 4px;
+  right: 4px;
+  transform: rotate(90deg);
+}
+
+.text-bottom-2 {
+  text-align: center;
+  font-family: Arial;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 22px;
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px; 
+  height: calc(46vh);
+  width: 100%;
+  background-image: url('../images/mobile/Characters.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.footer {
+  position: relative;
+
+}
+
+.wrapp {
+  position: absolute;
+  top: -240px;
+  transform: translateX(-50%)
+}
+
+@media (max-height: 745px) {
+
+  .wrapp {
+    top: -120px;
+    padding-bottom: 22px;
+  }
+
+  .characters {
+    top: -8px; 
+  }
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+  height: 80px;
+  background-image: url('../images/mobile/step-phone.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.step-text {
+  margin-left: 50px;
+  position: relative;
+  top: -3px;
+}
+
+.step-text-1 {
+  font-family: Almendra;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: capitalize;
+  color: rgba(255, 230, 23, 1);
+  line-height: 1;
+}
+
+.step-text-2 {
+  font-family: Source Sans Pro;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: rgba(241, 236, 231, 1);
+  line-height: 1;
+}
+
+.stem-img {
+  height: 65px;
+  width: 65px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 53px;
+}
+
+.stem-img--phone {
+  background-image: url('../images/mobile/key-phone.webp');
+}
+
+.stem-img--jug {
+  background-image: url('../images/mobile/jug-phone.webp');
+}
+
+.stem-img--cards {
+  background-image: url('../images/mobile/cards-phone.webp');
+}
