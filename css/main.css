@@ -204,7 +204,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: -50px; 
   height: calc(46vh);
   width: 100%;
   background-image: url('../images/mobile/Characters.webp');
@@ -226,17 +225,6 @@ body {
   position: absolute;
   width: 100%;
   top: -240px;
-}
-
-@media (max-height: 745px) {
-  .wrapp {
-    top: -120px;
-    padding-bottom: 22px;
-  }
-
-  .characters {
-    top: -8px; 
-  }
 }
 
 .steps {
@@ -297,3 +285,48 @@ body {
 .stem-img--cards {
   background-image: url('../images/mobile/cards-phone.webp');
 }
+
+@media (max-width: 380px) {
+  .characters {
+    top: -10px; 
+  }
+
+  .wrapp {
+    top: -122px;
+  }
+}
+
+
+@media (min-width: 381px) and (max-width: 480px) {
+  .characters {
+    top: -45px; 
+  }
+
+  .wrapp {
+    top: -250px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .characters {
+    top: -10px; 
+  }
+
+  .wrapp {
+    top: -125px;
+  }
+
+  .frame {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* стилі для планшетів */
+
+  
+}
+
+
+
