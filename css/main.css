@@ -15,16 +15,12 @@ html, body {
 
 body {
   position: relative;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   background-image: 
     linear-gradient(to top, #000117 0%, rgba(0, 1, 23, 0) 30%), 
     url('../images/mobile/bg-phone.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .star {
