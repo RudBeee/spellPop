@@ -522,6 +522,24 @@ body {
     z-index: 100;
   }
 
+  .stem-img {
+    height: 85px;
+    width: 85px;
+    margin-right: 32px;
+  }
+
+  .stem-img--phone {
+    background-image: url('../images/desktop/key-desk.webp');
+  }
+  
+  .stem-img--jug {
+    background-image: url('../images/desktop/jug-desk.webp');
+  }
+  
+  .stem-img--cards {
+    background-image: url('../images/desktop/card-desk.webp');
+  }
+
   .wrapp {
     flex-direction: row;
     position: relative;
@@ -627,6 +645,24 @@ body {
     left: 0;
     width: 100%;
     z-index: 100;
+  }
+
+  .stem-img {
+    height: 100px;
+    width: 100px;
+    margin-right: 32px;
+  }
+
+  .stem-img--phone {
+    background-image: url('../images/desktop/key-desk.webp');
+  }
+  
+  .stem-img--jug {
+    background-image: url('../images/desktop/jug-desk.webp');
+  }
+  
+  .stem-img--cards {
+    background-image: url('../images/desktop/card-desk.webp');
   }
 
   .wrapp {
