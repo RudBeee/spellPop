@@ -20,7 +20,7 @@ body {
     linear-gradient(to top, #000117 0%, rgba(0, 1, 23, 0) 30%), 
     url('../images/mobile/bg-phone.webp');
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 .header {
-  margin: 16px 0 5px 0;
+  padding: 16px 0 5px 0;
 }
 
 .logo {
@@ -358,7 +358,7 @@ body {
   }
 
   .header {
-    margin: 22px 0 17px 0;
+    padding: 22px 0 17px 0;
   }
   
   .logo {
@@ -721,7 +721,7 @@ body {
   }
 
   .header {
-    margin-top: 30px;
+    padding-top: 30px;
   }
 
   .logo {
