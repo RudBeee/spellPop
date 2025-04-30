@@ -17,9 +17,6 @@ body {
   background-color: #000117;
   height: 100%;
   position: relative;
-  background-image: 
-    linear-gradient(to top, #000117 0%, rgba(0, 1, 23, 0) 30%), 
-    url('../images/mobile/bg-phone.webp');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -283,17 +280,13 @@ body {
   background-image: url('../images/mobile/cards-phone.webp');
 }
 
-@media (max-width: 380px) {
-  .characters {
-    top: -10px; 
-  }
+@media (max-width: 480px) {
 
-  .wrapp {
-    top: -122px;
+  .body {
+    background-image: 
+    linear-gradient(to top, #000117 0%, rgba(0, 1, 23, 0) 30%), 
+    url('../images/mobile/bg-phone.webp');
   }
-}
-
-@media (min-width: 381px) and (max-width: 480px) {
   .characters {
     top: -12px; 
   }
