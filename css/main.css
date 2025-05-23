@@ -13,17 +13,17 @@ html, body {
   box-sizing: border-box;
 }
 
-body {
+html {
   background-color: #000117;
-  height: 100%;
-  position: relative;
+  background-image: url('../images/mobile/phone-bg.webp');
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
   background-attachment: scroll;
 
-  background-image: 
-  url('../images/mobile/phone-bg.webp');
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
 }
 
 .header {
@@ -524,6 +524,15 @@ body.modal-open .box--3 {
   }
 }
 
+.key,
+.button,
+.box {
+  outline: none;                           
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
 
 

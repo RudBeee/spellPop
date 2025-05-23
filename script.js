@@ -7,29 +7,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const boxes = document.querySelectorAll('.box');
   const modal = document.getElementById('modal');
 
-  // Початково кнопка неактивна
   button.classList.add('inactive');
 
   keys.forEach((key, index) => {
     key.addEventListener('click', () => {
-      // Знімаємо активність з усіх ключів
       keys.forEach((k, i) => {
         k.classList.remove('active');
         k.style.backgroundImage = `url('images/key${i + 1}.webp')`;
         k.style.transform = 'scale(1)';
       });
 
-      // Активуємо натиснутий ключ
       key.classList.add('active');
       key.style.backgroundImage = `url('images/key${index + 1}-active.webp')`;
       key.style.transform = 'scale(1.28)';
 
-      // Активуємо кнопку
       button.classList.remove('inactive');
     });
   });
 
-  // Обробка кліку по кнопці
   button.addEventListener('click', () => {
     if (button.classList.contains('inactive')) {
       console.log('Кнопка ще не активна!');
@@ -38,6 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     firstScreen.style.display = 'none';
     secondScreen.style.display = 'block';
+
+    console.log('smooth')
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
 
   });
 
