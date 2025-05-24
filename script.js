@@ -15,6 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
     k.style.backgroundImage= `url('./images/button-elem-noActive.png')`;
   })
 
+  const preloadImages = (srcs) => {
+    srcs.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  };
+  
+  // Вказуємо всі фони, які можуть використовуватись
+  preloadImages([
+    './images/key1-active.webp',
+    './images/key2-active.webp',
+    './images/key3-active.webp',
+    './images/box--1-active.webp',
+    './images/box--2-active.webp',
+    './images/box--3-active.webp',
+  ]);
+
   keys.forEach((key, index) => {
     key.addEventListener('click', () => {
       keys.forEach((k, i) => {

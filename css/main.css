@@ -5,6 +5,8 @@
   font-style: normal;
 }
 
+
+
 .key,
 .button,
 .box {
@@ -495,7 +497,7 @@ body.modal-open .box--3 {
     padding-top: 18px;
     padding-bottom: 48px;
   }
-  
+
   .key {
     width: 230px;
     height: 345px;
