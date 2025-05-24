@@ -5,6 +5,16 @@
   font-style: normal;
 }
 
+.key,
+.button,
+.box {
+  outline: none;                           
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -113,11 +123,27 @@ html {
   cursor: pointer;
 }
 
+.inactive {
+  background: rgba(139, 139, 139, 1);
+  border: 1px solid rgba(79, 79, 79, 1)
+}
+
+.pulse {
+  animation: scaleButton 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes scaleButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.85); }
+  100% { transform: scale(1); }
+}
+
 .corner {
   position: absolute;
   width: 16px;
   height: 16px;
-  background-image: url('../images/button-elem.webp'); 
+  background-image: url('../images/button-elem-noActive.png');
+  /* background-image: url('../images/button-elem.webp');  */
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -153,6 +179,10 @@ html {
   text-align: center;
   text-transform: capitalize;
   color: rgba(129, 34, 0, 1);
+}
+
+.inactive-text {
+  color: rgba(71, 71, 71, 1);
 }
 
 .secondScreen {
@@ -196,7 +226,6 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.7);  */
   display: none;
   justify-content: center;
   align-items: center;
@@ -239,6 +268,14 @@ body.modal-open .container > *:not(.modal-overlay) {
   width: 293px;
   height: 56px;
   text-decoration: none;
+  box-shadow: 0px 0px 15px 0px rgba(255, 225, 117, 0.83);
+  animation: scaleButton 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes scaleButton {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.85); }
+  100% { transform: scale(1); }
 }
 
 .button--text--pop {
@@ -257,113 +294,7 @@ body.modal-open .box--3 {
   background-image: url('../images/box--3-activ.webp');
 }
 
-@media (min-width: 767px) and (max-width: 1024px) {
-
-  body {
-    background-position: center;
-    background-image: url('../images/tab/tab-bg.webp');
-  }
-
-  .header {
-    padding: 48px 0;
-  }
-  
-  .logo {
-    width: 274px;
-    height: 131px;
-    background-image: url('../images/tab/Logo-tab.webp');
-  }
-
-  .title__text {
-    max-width: 645px;
-    margin: 0 auto;
-    gap: 24px;
-  }
-
-  .text__top {
-    font-size: 48px;
-  }
-
-  .text__bottom {
-    font-size: 24px;
-    margin: 0;
-  }
-
-  .keys {
-    gap: 54px;
-    padding-top: 74px;
-    padding-bottom: 84px;
-  }
-  .key {
-    width: 201px;
-    height: 330px;
-  }
-
-  .button {
-    width: 355px;
-  }
-
-  .boxs {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 58px;
-    padding-top: 16px;
-  }
-  
-  .box {
-    width: 291px;
-    height: 434px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .modal {
-    display: block;
-    width: 672px;
-    height: 366px;
-    margin: 0 auto;
-    background-image: url('../images/popum--desk.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    padding: 0;
-  }
-  
-  .title__text--pop {
-    gap: 0;
-  }
-  
-  .text__bottom-pop {
-    font-family: Montserrat;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 130%;
-    text-shadow: 0.88px 1.75px 0px rgba(120, 85, 7, 1);
-    padding: 74px 0 15px 0;
-  }
-  
-  .text__top-pop {
-    margin: 0 auto;
-    line-height:  110%;
-    width: 512px;
-    font-size: 36px;
-    padding: 0 2px 40px 2px; 
-  }
-  
-  .button--pop {
-    width: 293px;
-    height: 56px;
-    text-decoration: none;
-  }
-  
-  .button--text--pop {
-  
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1025px) {
+@media (min-width: 1440px) {
   body {
     width: 100vw;
     height: 100vh;  
@@ -375,7 +306,7 @@ body.modal-open .box--3 {
   }
 
   .header {
-    padding: 48px 0 59px 0;
+    padding: 35px 0 45px 0;
   }
   
   .logo {
@@ -401,8 +332,8 @@ body.modal-open .box--3 {
 
   .keys {
     gap: 84px;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 40px;
+    padding-bottom: 4px;
   }
   .key {
     width: 201px;
@@ -524,15 +455,271 @@ body.modal-open .box--3 {
   }
 }
 
-.key,
-.button,
-.box {
-  outline: none;                           
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+@media (min-width: 767px) and (max-width: 1024px) {
+
+  body {
+    background-position: center;
+    background-image: url('../images/tab/tab-bg.webp');
+  }
+
+  .header {
+    padding: 48px 0;
+  }
+  
+  .logo {
+    width: 274px;
+    height: 131px;
+    background-image: url('../images/tab/Logo-tab.webp');
+  }
+
+  .title__text {
+    max-width: 645px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .text__top {
+    font-size: 48px;
+  }
+
+  .text__bottom {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .keys {
+    gap: 54px;
+    padding-top: 74px;
+    padding-bottom: 84px;
+  }
+  .key {
+    width: 201px;
+    height: 330px;
+  }
+
+  .button {
+    width: 355px;
+  }
+
+  .boxs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 58px;
+    padding-top: 16px;
+  }
+  
+  .box {
+    width: 291px;
+    height: 434px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .modal {
+    display: block;
+    width: 672px;
+    height: 366px;
+    margin: 0 auto;
+    background-image: url('../images/popum--desk.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 0;
+  }
+  
+  .title__text--pop {
+    gap: 0;
+  }
+  
+  .text__bottom-pop {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 130%;
+    text-shadow: 0.88px 1.75px 0px rgba(120, 85, 7, 1);
+    padding: 74px 0 15px 0;
+  }
+  
+  .text__top-pop {
+    margin: 0 auto;
+    line-height:  110%;
+    width: 512px;
+    font-size: 36px;
+    padding: 0 2px 40px 2px; 
+  }
+  
+  .button--pop {
+    width: 293px;
+    height: 56px;
+    text-decoration: none;
+  }
+  
+  .button--text--pop {
+  
+    font-size: 16px;
+  }
 }
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+  body {
+    width: 100vw;
+    height: 100vh;  
+    overflow: hidden;
+    background-image: url('../images/desktop/desktop--bg.webp');
+    background-position: center;
+    background-size: cover;
+  
+  }
+
+  .header {
+    padding: 30px 0 20px 0;
+  }
+  
+  .logo {
+    width: 250px;
+    height: 110px;
+    background-image: url('../images/desktop/Logo-desk.webp');
+  }
+
+  .title__text {
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .text__top {
+    font-size: 42px;
+  }
+
+  .text__bottom {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .keys {
+    gap: 84px;
+    padding-top: 9px;
+    padding-bottom: 15px;
+  }
+  .key {
+    width: 201px;
+    height: 330px;
+  }
+
+  .key--1:hover {
+    transform: scale(1.28);
+    background-image: url('../images/key1-active.webp');
+  }
+  
+  .key--2:hover {
+    transform: scale(1.28);
+    background-image: url('../images/key2-active.webp');
+  }
+  
+  .key--3:hover {
+    transform: scale(1.28);
+    background-image: url('../images/key3-active.webp');
+  }
+
+  .button {
+    width: 355px;
+  }
+
+  .button.inactive {
+    pointer-events: none;
+    /* opacity: 0.5; */
+    cursor: not-allowed;
+  }
+
+  .boxs {
+    flex-direction: row;
+    gap: 84px;
+    padding-top: 85px;
+  }
+  
+  .box {
+    width: 339px;
+    height: 404px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .box--1, .box--2, .box--3 {
+    background-image: url('../images/box.webp');
+  }
+
+  .box--1:hover {
+    background-image: url('../images/box--1-activ.webp');
+  }
+  
+  .box--2:hover {
+    background-image: url('../images/box--2-activ.webp');
+  }
+  
+  .box--3:hover {
+    background-image: url('../images/box--3-activ.webp');
+  }
+
+    .boxs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 58px;
+    padding-top: 16px;
+  }
+  
+  .box {
+    width: 291px;
+    height: 434px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .modal {
+    display: block;
+    width: 672px;
+    height: 366px;
+    margin: 0 auto;
+    background-image: url('../images/popum--desk.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 0;
+  }
+  
+  .title__text--pop {
+    gap: 0;
+  }
+  
+  .text__bottom-pop {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 130%;
+    text-shadow: 0.88px 1.75px 0px rgba(120, 85, 7, 1);
+    padding: 74px 0 15px 0;
+  }
+  
+  .text__top-pop {
+    margin: 0 auto;
+    line-height:  110%;
+    width: 512px;
+    font-size: 36px;
+    padding: 0 2px 40px 2px; 
+  }
+  
+  .button--pop {
+    width: 293px;
+    height: 56px;
+    text-decoration: none;
+  }
+  
+  .button--text--pop {
+  
+    font-size: 16px;
+  }
+};
 
 
 

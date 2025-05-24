@@ -6,8 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const secondScreen = document.querySelector('.secondScreen');
   const boxes = document.querySelectorAll('.box');
   const modal = document.getElementById('modal');
+  const buttonText = document.querySelector('.button--text');
+  const corner = document.querySelectorAll('.corner');
 
   button.classList.add('inactive');
+  buttonText.classList.add('inactive-text');
+  // corner.classList.add('inactive');
 
   keys.forEach((key, index) => {
     key.addEventListener('click', () => {
@@ -21,7 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
       key.style.backgroundImage = `url('images/key${index + 1}-active.webp')`;
       key.style.transform = 'scale(1.28)';
 
+      corner.forEach((k, i) => {
+        k.style.backgroundImage= `url('../images/button-elem.webp')`;
+      })
+
       button.classList.remove('inactive');
+      buttonText.classList.remove('inactive-text');
+      // corner.classList.remove('inactive');
+      button.classList.add('pulse');
     });
   });
 
@@ -49,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
       
       modal.style.display = 'flex';
       document.body.classList.add('modal-open');
-      
     });
   });
 });
