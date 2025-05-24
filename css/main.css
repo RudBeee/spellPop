@@ -304,12 +304,12 @@ body.modal-open .box--3 {
   }
 
   .header {
-    padding: 27px 0 40px 0;
+    padding: 25px 0 35px 0;
   }
   
   .logo {
-    width: 274px;
-    height: 131px;
+    width: 271px;
+    height: 128px;
     background-image: url('../images/desktop/Logo-desk.webp');
   }
 
