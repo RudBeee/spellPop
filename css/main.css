@@ -292,6 +292,7 @@ body.modal-open .box--3 {
   background-image: url('../images/box--3-activ.webp');
 }
 
+
 @media (min-width: 1440px) {
   body {
     width: 100vw;
@@ -452,6 +453,169 @@ body.modal-open .box--3 {
     font-size: 16px;
   }
 }
+
+@media (min-width: 1440px) and (min-height: 890px){
+  body {
+    width: 100vw;
+    height: 100vh;  
+    overflow: hidden;
+    background-image: url('../images/desktop/desktop--bg.webp');
+    background-position: center;
+    background-size: cover;
+  
+  }
+
+  .header {
+    padding: 48px 0 59px 0;
+  }
+  
+  .logo {
+    width: 274px;
+    height: 131px;
+    background-image: url('../images/desktop/Logo-desk.webp');
+  }
+
+  .title__text {
+    /* max-width: 1090px; */
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .text__top {
+    font-size: 48px;
+  }
+
+  .text__bottom {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .keys {
+    gap: 84px;
+    padding-top: 18px;
+    padding-bottom: 48px;
+  }
+  
+  .key {
+    width: 230px;
+    height: 345px;
+  }
+
+  .key--1:hover {
+    transform: scale(1.28);
+    background-image: url('../images/key1-active.webp');
+  }
+  
+  .key--2:hover {
+    transform: scale(1.28);
+    background-image: url('../images/key2-active.webp');
+  }
+  
+  .key--3:hover {
+    transform: scale(1.28);
+    background-image: url('../images/key3-active.webp');
+  }
+
+  .button {
+    width: 355px;
+  }
+
+  .button.inactive {
+    pointer-events: none;
+    /* opacity: 0.5; */
+    cursor: not-allowed;
+  }
+
+  .boxs {
+    flex-direction: row;
+    gap: 84px;
+    padding-top: 85px;
+  }
+  
+  .box {
+    width: 339px;
+    height: 404px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .box--1, .box--2, .box--3 {
+    background-image: url('../images/box.webp');
+  }
+
+  .box--1:hover {
+    background-image: url('../images/box--1-activ.webp');
+  }
+  
+  .box--2:hover {
+    background-image: url('../images/box--2-activ.webp');
+  }
+  
+  .box--3:hover {
+    background-image: url('../images/box--3-activ.webp');
+  }
+
+    .boxs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 58px;
+    padding-top: 16px;
+  }
+  
+  .box {
+    width: 291px;
+    height: 434px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .modal {
+    display: block;
+    width: 672px;
+    height: 366px;
+    margin: 0 auto;
+    background-image: url('../images/popum--desk.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 0;
+  }
+  
+  .title__text--pop {
+    gap: 0;
+  }
+  
+  .text__bottom-pop {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 130%;
+    text-shadow: 0.88px 1.75px 0px rgba(120, 85, 7, 1);
+    padding: 74px 0 15px 0;
+  }
+  
+  .text__top-pop {
+    margin: 0 auto;
+    line-height:  110%;
+    width: 512px;
+    font-size: 36px;
+    padding: 0 2px 40px 2px; 
+  }
+  
+  .button--pop {
+    width: 293px;
+    height: 56px;
+    text-decoration: none;
+  }
+  
+  .button--text--pop {
+  
+    font-size: 16px;
+  }
+}
+
 
 @media (min-width: 1025px) and (max-width: 1439px) {
   body {
