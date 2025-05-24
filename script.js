@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
   
-  // Вказуємо всі фони, які можуть використовуватись
+
   preloadImages([
-    './images/key1-active.webp',
-    './images/key2-active.webp',
-    './images/key3-active.webp',
-    './images/box--1-active.webp',
-    './images/box--2-active.webp',
-    './images/box--3-active.webp',
+    '../images/key1-active.webp',
+    '../images/key2-active.webp',
+    '../images/key3-active.webp',
+    '../images/box--1-active.webp',
+    '../images/box--2-active.webp',
+    '../images/box--3-active.webp',
   ]);
 
   keys.forEach((key, index) => {
