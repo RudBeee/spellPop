@@ -1,3 +1,12 @@
+const key1 = new Image();
+key1.src = '/img/background2.jpg';
+
+const key2 = new Image();
+key2.src = '/img/background2.jpg';
+
+const key3 = new Image();
+key3.src = '/img/background2.jpg';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const keys = document.querySelectorAll('.key');
@@ -29,8 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
       key.style.transform = 'scale(1.28)';
 
       corner.forEach((k, i) => {
-        k.style.backgroundImage= `url('../images/button-elem.webp')`;
+        k.style.backgroundImage= `url('./images/button-elem.webp')`;
       })
+
+      button.style.boxShadow = "0px 0px 19px 0px rgba(238, 255, 0, 1)";
 
       button.classList.remove('inactive');
       buttonText.classList.remove('inactive-text');
