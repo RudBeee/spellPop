@@ -1,13 +1,3 @@
-const key1 = new Image();
-key1.src = '/img/background2.jpg';
-
-const key2 = new Image();
-key2.src = '/img/background2.jpg';
-
-const key3 = new Image();
-key3.src = '/img/background2.jpg';
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const keys = document.querySelectorAll('.key');
   const button = document.querySelector('.button');
@@ -22,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   buttonText.classList.add('inactive-text');
 
   corner.forEach((k, i) => {
-    k.style.backgroundImage= `url('../images/button-elem-noActive.png')`;
+    k.style.backgroundImage= `url('./images/button-elem-noActive.png')`;
   })
 
   keys.forEach((key, index) => {
