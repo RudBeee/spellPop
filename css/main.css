@@ -119,7 +119,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   cursor: pointer;
 }
 
@@ -142,8 +141,7 @@ html {
   position: absolute;
   width: 16px;
   height: 16px;
-  background-image: url('../images/button-elem-noActive.png');
-  /* background-image: url('../images/button-elem.webp');  */
+  background-image: url('../images/button-elem.webp'); 
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -455,112 +453,6 @@ body.modal-open .box--3 {
   }
 }
 
-@media (min-width: 767px) and (max-width: 1024px) {
-
-  body {
-    background-position: center;
-    background-image: url('../images/tab/tab-bg.webp');
-  }
-
-  .header {
-    padding: 48px 0;
-  }
-  
-  .logo {
-    width: 274px;
-    height: 131px;
-    background-image: url('../images/tab/Logo-tab.webp');
-  }
-
-  .title__text {
-    max-width: 645px;
-    margin: 0 auto;
-    gap: 24px;
-  }
-
-  .text__top {
-    font-size: 48px;
-  }
-
-  .text__bottom {
-    font-size: 24px;
-    margin: 0;
-  }
-
-  .keys {
-    gap: 54px;
-    padding-top: 74px;
-    padding-bottom: 84px;
-  }
-  .key {
-    width: 201px;
-    height: 330px;
-  }
-
-  .button {
-    width: 355px;
-  }
-
-  .boxs {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 58px;
-    padding-top: 16px;
-  }
-  
-  .box {
-    width: 291px;
-    height: 434px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .modal {
-    display: block;
-    width: 672px;
-    height: 366px;
-    margin: 0 auto;
-    background-image: url('../images/popum--desk.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    padding: 0;
-  }
-  
-  .title__text--pop {
-    gap: 0;
-  }
-  
-  .text__bottom-pop {
-    font-family: Montserrat;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 130%;
-    text-shadow: 0.88px 1.75px 0px rgba(120, 85, 7, 1);
-    padding: 74px 0 15px 0;
-  }
-  
-  .text__top-pop {
-    margin: 0 auto;
-    line-height:  110%;
-    width: 512px;
-    font-size: 36px;
-    padding: 0 2px 40px 2px; 
-  }
-  
-  .button--pop {
-    width: 293px;
-    height: 56px;
-    text-decoration: none;
-  }
-  
-  .button--text--pop {
-  
-    font-size: 16px;
-  }
-}
-
 @media (min-width: 1025px) and (max-width: 1439px) {
   body {
     width: 100vw;
@@ -573,12 +465,12 @@ body.modal-open .box--3 {
   }
 
   .header {
-    padding: 30px 0 20px 0;
+    padding: 20px 0 20px 0;
   }
   
   .logo {
-    width: 250px;
-    height: 110px;
+    width: 220px;
+    height: 90px;
     background-image: url('../images/desktop/Logo-desk.webp');
   }
 
@@ -597,13 +489,13 @@ body.modal-open .box--3 {
   }
 
   .keys {
-    gap: 84px;
+    gap: 64px;
     padding-top: 9px;
     padding-bottom: 15px;
   }
   .key {
-    width: 201px;
-    height: 330px;
+    width: 180px;
+    height: 300px;
   }
 
   .key--1:hover {
@@ -720,6 +612,113 @@ body.modal-open .box--3 {
     font-size: 16px;
   }
 };
+
+@media (min-width: 767px) and (max-width: 1024px) {
+
+  body {
+    background-position: center;
+    background-image: url('../images/tab/tab-bg.webp');
+  }
+
+  .header {
+    padding: 48px 0;
+  }
+  
+  .logo {
+    width: 274px;
+    height: 131px;
+    background-image: url('../images/tab/Logo-tab.webp');
+  }
+
+  .title__text {
+    max-width: 645px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .text__top {
+    font-size: 48px;
+  }
+
+  .text__bottom {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .keys {
+    gap: 54px;
+    padding-top: 74px;
+    padding-bottom: 84px;
+  }
+  .key {
+    width: 201px;
+    height: 330px;
+  }
+
+  .button {
+    width: 355px;
+  }
+
+  .boxs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 58px;
+    padding-top: 16px;
+  }
+  
+  .box {
+    width: 291px;
+    height: 434px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .modal {
+    display: block;
+    width: 672px;
+    height: 366px;
+    margin: 0 auto;
+    background-image: url('../images/popum--desk.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 0;
+  }
+  
+  .title__text--pop {
+    gap: 0;
+  }
+  
+  .text__bottom-pop {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 130%;
+    text-shadow: 0.88px 1.75px 0px rgba(120, 85, 7, 1);
+    padding: 74px 0 15px 0;
+  }
+  
+  .text__top-pop {
+    margin: 0 auto;
+    line-height:  110%;
+    width: 512px;
+    font-size: 36px;
+    padding: 0 2px 40px 2px; 
+  }
+  
+  .button--pop {
+    width: 293px;
+    height: 56px;
+    text-decoration: none;
+  }
+  
+  .button--text--pop {
+  
+    font-size: 16px;
+  }
+}
+
 
 
 

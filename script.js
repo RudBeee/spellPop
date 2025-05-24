@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   button.classList.add('inactive');
   buttonText.classList.add('inactive-text');
-  // corner.classList.add('inactive');
+
+  corner.forEach((k, i) => {
+    k.style.backgroundImage= `url('../images/button-elem-noActive.png')`;
+  })
 
   keys.forEach((key, index) => {
     key.addEventListener('click', () => {
@@ -31,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       button.classList.remove('inactive');
       buttonText.classList.remove('inactive-text');
-      // corner.classList.remove('inactive');
       button.classList.add('pulse');
     });
   });
