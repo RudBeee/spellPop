@@ -24,13 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
 
   preloadImages([
-    '../images/key1-active.webp',
-    '../images/key2-active.webp',
-    '../images/key3-active.webp',
-    '../images/box--1-active.webp',
-    '../images/box--2-active.webp',
-    '../images/box--3-active.webp',
+    'images/key1-active.webp',
+    'images/key2-active.webp',
+    'images/key3-active.webp',
+    'images/box--1-activ.webp',
+    'images/box--2-activ.webp',
+    'images/box--3-activ.webp',
   ]);
+
+  // img.onload = () => console.log(`${src} loaded`);
+  // img.onerror = () => console.error(`${src} failed`);
 
   keys.forEach((key, index) => {
     key.addEventListener('click', () => {
