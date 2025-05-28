@@ -45,7 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       key.classList.add('active');
       key.style.backgroundImage = `url('images/key${index + 1}-active.webp')`;
-      key.style.transform = 'scale(1.28)';
+      key.style.transform = 'scale(1.08)';
+      key.style.backgroundSize = 'auto 90%';
 
       corner.forEach((k, i) => {
         k.style.backgroundImage= `url('./images/button-elem.webp')`;

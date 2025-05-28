@@ -81,12 +81,11 @@ html {
 }
 
 .keys {
-  /* padding: 38px 5px 68px 5px; */
   padding-top: 42px;
   padding-bottom: 65px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 8px;
 }
@@ -94,7 +93,7 @@ html {
 .key {
   width: 100px;
   height: 156px;
-  background-size: contain;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
   
@@ -120,7 +119,7 @@ html {
   background: rgba(255, 225, 117, 1);
   border: 1px solid rgba(246, 143, 0, 1);
   margin: 0 auto;
-  /* margin-bottom: 60px; */
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -626,17 +625,17 @@ body.modal-open .box--3 {
   }
 
   .key--1:hover {
-    transform: scale(1.28);
+    /* transform: scale(1.28); */
     background-image: url('../images/key1-active.webp');
   }
   
   .key--2:hover {
-    transform: scale(1.28);
+    /* transform: scale(1.28); */
     background-image: url('../images/key2-active.webp');
   }
   
   .key--3:hover {
-    transform: scale(1.28);
+    /* transform: scale(1.28); */
     background-image: url('../images/key3-active.webp');
   }
 
@@ -787,17 +786,20 @@ body.modal-open .box--3 {
   }
 
   .key--1:hover {
-    transform: scale(1.28);
+    /* transform: scale(1.08); */
+    background-size: auto 90%;
     background-image: url('../images/key1-active.webp');
   }
   
   .key--2:hover {
-    transform: scale(1.28);
+    /* transform: scale(1.08); */
+    background-size: auto 90%;
     background-image: url('../images/key2-active.webp');
   }
   
   .key--3:hover {
-    transform: scale(1.28);
+    /* transform: scale(1.08); */
+    background-size: auto 90%;
     background-image: url('../images/key3-active.webp');
   }
 
